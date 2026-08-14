@@ -4,3 +4,5 @@ Ele basicamente conecta o php no banco de dados mysql, define os dados do banco,
 02-(Index)
 Essa parte do código é responsável por fazer o login do usuário, é um sistema simples de login que verifica os dados no banco e, se estiverem corretos, libera o acesso ao painel, caso não dé certo, exibe a mensagem "Falha ao logar"
 03-(Logout)
+Esse código serve para fazer logout(sair da conta), ele desloga o usuário e volta para a tela de login inicial
+04-(Painel)
