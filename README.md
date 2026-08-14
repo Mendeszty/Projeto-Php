@@ -1,9 +1,15 @@
 # Projeto-Php
+Projeto de login em Php - Programação para internet
+Professor - Thiago Theiry
+Aluno - Paulo Mendes de Sousa Neto
+Info - 4M / Data 14-08-2026
 01-(Conexão) 
-Ele basicamente conecta o php no banco de dados mysql, define os dados do banco, como: servidor, usuário, senha e nome de banco, tenta fazer a conexão usando mysql, e se a conexão não der certo, ele vai mostrar "Conexão não deu certo" e para o programa
+O sistema começa pelo arquivo conexao.php, que é responsável por conectar o PHP ao banco de dados MySQL usando o comando new mysqli(), o connect_error verifica se houve algum erro na conexão e o die() encerra o sistema caso a conexão não seja realizada
 02-(Index)
-Essa parte do código é responsável por fazer o login do usuário, é um sistema simples de login que verifica os dados no banco e, se estiverem corretos, libera o acesso ao painel, caso não dé certo, exibe a mensagem "Falha ao logar"
+No index.php, acontece o login do usuário, o $_POST recebe o e-mail e a senha, e o código verifica se os campos foram preenchidos, depois, o SELECT procura esses dados no banco, se estiverem corretos, o $_SESSION salva as informações do usuário e o header() direciona para o painel, caso contrário, aparece uma "mensagem de erro"
 03-(Logout)
-Esse código serve para fazer logout(sair da conta), ele desloga o usuário e volta para a tela de login inicial
+O logout.php é responsável por sair da conta, ele inicia a sessão com session_start(), encerra a sessão usando session_destroy() e utiliza header() para voltar para a página inicial
 04-(Painel)
-Esse aqui serve para criar o painel do usuário após o login, também é a pagina protegida que mostra o nome do usuário logado e oferece a opção de sair
+O painel.php é a página que o usuário acessa depois de fazer login. O include('protect.php') verifica se ele está autorizado a entrar, o $_SESSION['nome'] pega o nome que foi salvo durante o login e mostra uma mensagem de boas-vindas. Também existe um link para o logout.php
+05-(Proteger)
+O protect.php serve para proteger o painel, ele utiliza session_start() para iniciar a sessão e isset($_SESSION['id']) para verificar se existe um usuário logado, caso não exista, o die() bloqueia o acesso e mostra uma mensagem dizendo que é necessário fazer login
