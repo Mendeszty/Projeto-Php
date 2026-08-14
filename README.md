@@ -6,3 +6,4 @@ Essa parte do código é responsável por fazer o login do usuário, é um siste
 03-(Logout)
 Esse código serve para fazer logout(sair da conta), ele desloga o usuário e volta para a tela de login inicial
 04-(Painel)
+Esse aqui serve para criar o painel do usuário após o login, também é a pagina protegida que mostra o nome do usuário logado e oferece a opção de sair
