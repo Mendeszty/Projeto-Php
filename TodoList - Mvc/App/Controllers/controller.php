@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/.../models/tarefas.php';
+require_once __DIR__ . '/../Models/tarefa.php';
 
 class TarefaController {
     private $tarefaModel;
@@ -27,7 +27,7 @@ class TarefaController {
 
     public function index() {
         $tarefas = $this -> tarefaModel -> listar();
-        include __DIR__ . '/.../views/listar.php';
+        include __DIR__ . '/../Views/listar.php';
     }
 }
 
